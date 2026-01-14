@@ -90,12 +90,11 @@ def main():
 
                 # Check survive condition
                 if not game_over and turns >= SURVIVE_TURNS:
+                    game_over = True
                     if HUMAN_IS_PREY:
-                        game_over = True
                         result_text = "You survived! Prey (You) win."
                     else:
-                        game_over = True
-                        result_text = "Prey survived. AI wins."
+                        result_text = "Time Up! Prey survived. AI wins."
 
         # Draw grid + agents
         grid.draw(window)
